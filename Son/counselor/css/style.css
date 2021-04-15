@@ -143,6 +143,7 @@ h2 {
 }
 th, td {
     padding: 5px;
+  text-align: center;
 }
 th {
     text-align: left;
