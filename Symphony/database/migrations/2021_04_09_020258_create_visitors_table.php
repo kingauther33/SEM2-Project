@@ -16,14 +16,14 @@ class CreateVisitorsTable extends Migration
         Schema::create('visitors', function (Blueprint $table) {
             $table->id();
 
-            $table->integer('visitor_statuses_id')->unsigned();
-
             $table->string('fname');
             $table->string('lname');
             $table->string('email');
             $table->string('phone');
             $table->date('dob');
-            $table->integer('e_mark');
+            $table->string('address', 255);
+            $table->tinyInteger('status');
+            $table->integer('entrance_mark');
 
 
             $table->timestamps();

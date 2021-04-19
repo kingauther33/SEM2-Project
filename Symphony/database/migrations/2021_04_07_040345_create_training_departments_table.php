@@ -16,12 +16,11 @@ class CreateTrainingDepartmentsTable extends Migration
         Schema::create('training_departments', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name');
             $table->string('email');
             $table->string('password');
             $table->string('fname');
             $table->string('lname');
-            $table->string('dob');
+            $table->date('dob');
             $table->string('phone');
             $table->date('last_login_date');
             $table->string('last_login_ip');

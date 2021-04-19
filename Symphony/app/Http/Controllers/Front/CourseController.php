@@ -19,4 +19,13 @@ class CourseController extends Controller
     public function contact() {
         return view('front.contact.contact');
     }
+    public function faq() {
+        return view('front.faq.faq');
+    }
+    public function entrance_exam() {
+        return view('front.entrance_exam.entrance_exam');
+    }
+    public function search_exam() {
+        return view('front.search_exam.search_exam');
+    }
 }

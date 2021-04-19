@@ -102,195 +102,255 @@ class DatabaseSeeder extends Seeder
             ]
         ]);
 
-        DB::table('classes')->insert([
+        DB::table('grades')->insert([
             [
+                'teacher_id' => 1,
+                'course_id' => 1,
                 'year' => 2019,
                 'name' => 'T2019M',
-                'description' => 'Lop Hoc Co Thi',
-                'teacher_id' => 1,
-                'courses_id' => 1
+                'description' => 'Lop Hoc Co Thi'
             ],
             [
+                'teacher_id' => 1,
+                'course_id' => 2,
                 'year' => 2020,
                 'name' => 'T2020N',
                 'description' => 'Lop Hoc Co Thi Ver2',
-                'teacher_id' => 1,
-                'courses_id' => 2
             ],
             [
+                'teacher_id' => 2,
+                'course_id' => 1,
                 'year' => 2020,
                 'name' => 'T2020N',
                 'description' => 'Lop Hoc Co Ha',
-                'teacher_id' => 2,
-                'courses_id' => 1
             ],
             [
+                'teacher_id' => 1,
+                'course_id' => 3,
                 'year' => 2019,
                 'name' => 'T2019A',
                 'description' => 'Lop Hoc Co Thi Ver3',
-                'teacher_id' => 1,
-                'courses_id' => 3
             ],
             [
+                'teacher_id' => 1,
+                'course_id' => 2,
                 'year' => 2020,
                 'name' => 'T2020M',
                 'description' => 'Lop Hoc Co Thi Ver2',
-                'teacher_id' => 1,
-                'courses_id' => 2
+            ]
+        ]);
+
+        DB::table('subjects')->insert([
+            [
+                'course_id' => 1,
+                'acronym' => 'ADCP',
+                'name' => 'An Di Ci Pee'
+            ],
+            [
+                'course_id' => 1,
+                'acronym' => 'AILE',
+                'name' => 'An In Lieu Eiu'
+            ],
+            [
+                'course_id' => 1,
+                'acronym' => 'BMEI',
+                'name' => 'Bi Mu En Ieu'
+            ],
+            [
+                'course_id' => 2,
+                'acronym' => 'KMIJ',
+                'name' => 'Khong Mua Ieu Jieu'
+            ],
+            [
+                'course_id' => 2,
+                'acronym' => 'KEUJ',
+                'name' => 'Keu Eun Uoi Jeu'
             ]
         ]);
 
         DB::table('courses')->insert([
             [
-               'syllabus' => 'ADCP',
-               'description' => 'An Di Ci Pee'
+                'name' => 'Khoa hoc co ban (4 thang)',
+                'summary' => 'Ban se nam bat duoc tat ca nhung thu co ban ve code'
             ],
             [
-                'syllabus' => 'AILE',
-                'description' => 'An In Lieu Eiu'
+                'name' => 'Khoa hoc nang cao (6 thang)',
+                'summary' => 'Ban se nam bat duoc nhung thu nang cao ve code'
             ],
             [
-                'syllabus' => 'BMEI',
-                'description' => 'Bi Mu En Ieu'
-            ],
-            [
-                'syllabus' => 'KMIJ',
-                'description' => 'Khong Mua Ieu Jieu'
-            ],
-            [
-                'syllabus' => 'KEUJ',
-                'description' => 'Keu Eun Uoi Jeu'
+                'name' => 'Khoa hoc master (12 thang)',
+                'summary' => 'Ban se dung duoc cac framework, hieu duoc co ban va nang cao ve code'
             ]
+        ]);
+
+        DB::table('training_departments')->insert([
+            [
+                'email' => 'tungtran102@fpt.edu.vn',
+                'password' => $faker->password,
+                'fname' => 'Tran',
+                'lname' => 'Tung',
+                'dob' => $faker->dateTimeBetween('-50 years', '-40 years'),
+                'phone' => $faker->phoneNumber,
+                'last_login_date' => $faker->dateTimeBetween('-30 days', now()),
+                'last_login_ip' => $faker->ipv4
+            ],
+            [
+                'email' => 'toanngo123@fpt.edu.vn',
+                'password' => $faker->password,
+                'fname' => 'Ngo',
+                'lname' => 'Toan',
+                'dob' => $faker->dateTimeBetween('-50 years', '-40 years'),
+                'phone' => $faker->phoneNumber,
+                'last_login_date' => $faker->dateTimeBetween('-30 days', now()),
+                'last_login_ip' => $faker->ipv4
+            ],
+            [
+                'email' => 'thieutoan123@fpt.edu.vn',
+                'password' => $faker->password,
+                'fname' => 'Thieu',
+                'lname' => 'Toan',
+                'dob' => $faker->dateTimeBetween('-50 years', '-40 years'),
+                'phone' => $faker->phoneNumber,
+                'last_login_date' => $faker->dateTimeBetween('-30 days', now()),
+                'last_login_ip' => $faker->ipv4
+            ],
+
         ]);
 
         DB::table('exams')->insert([
             [
-                'exam_id' => 1,
-                'student_id' => 1,
-                'start_date' => '2021-01-10',
-                'mark' => 8
+                'exam_type_id' => 1,
+                'training_department_id' => 1,
+                'subject_id' => 1,
+                'start_date' => '2021-01-15',
             ],
             [
-                'exam_id' => 1,
-                'student_id' => 2,
-                'start_date' => '2021-01-10',
-                'mark' => 9
+                'exam_type_id' => 1,
+                'training_department_id' => 1,
+                'subject_id' => 2,
+                'start_date' => '2021-01-30',
             ],
             [
-                'exam_id' => 1,
-                'student_id' => 3,
-                'start_date' => '2021-01-10',
-                'mark' => 6
+                'exam_type_id' => 2,
+                'training_department_id' => 1,
+                'subject_id' => 1,
+                'start_date' => '2021-02-08',
             ],
             [
-                'exam_id' => 1,
-                'student_id' => 4,
-                'start_date' => '2021-01-10',
-                'mark' => 10
+                'exam_type_id' => 1,
+                'training_department_id' => 2,
+                'subject_id' => 3,
+                'start_date' => '2020-12-24',
             ],
             [
-                'exam_id' => 2,
-                'student_id' => 1,
-                'start_date' => '2021-03-20',
-                'mark' => 7
+                'exam_type_id' => 2,
+                'training_department_id' => 1,
+                'subject_id' => 2,
+                'start_date' => '2021-03-21',
             ],
             [
-                'exam_id' => 2,
-                'student_id' => 2,
-                'start_date' => '2021-03-20',
-                'mark' => 9
+                'exam_type_id' => 2,
+                'training_department_id' => 1,
+                'subject_id' => 1,
+                'start_date' => '2021-02-11',
             ],
             [
-                'exam_id' => 2,
-                'student_id' => 3,
-                'start_date' => '2021-03-20',
-                'mark' => 10
+                'exam_type_id' => 1,
+                'training_department_id' => 2,
+                'subject_id' => 3,
+                'start_date' => '2021-04-01',
             ]
         ]);
 
         DB::table('exam_types')->insert([
             [
-                'description' => 'Bai kiem tra dau vao'
+                'name' => 'Bai kiem tra giua ki',
             ],
             [
-                'description' => 'Bai kiem tra cuoi ki'
+                'name' => 'Bai kiem tra cuoi ki',
             ]
         ]);
 
         DB::table('students')->insert([
             [
-                'classes_id' => 1,
+                'grade_id' => 1,
                 'email' => $faker->email(),
                 'password' => $faker->password(),
                 'fname' => $faker->firstName(),
                 'lname' => $faker->lastName(),
                 'dob' => $faker->dateTimeBetween('-30 years', '-20 years'),
                 'phone' => $faker->phoneNumber,
+                'address' => $faker->address,
                 'date_of_join' => $faker->dateTimeBetween('-2 years', now()),
                 'status' => 1,
                 'last_login_date' => $faker->dateTimeBetween('-30 days', now()),
                 'last_login_ip' => $faker->ipv4
             ],
             [
-                'classes_id' => 1,
+                'grade_id' => 1,
                 'email' => $faker->email(),
                 'password' => $faker->password(),
                 'fname' => $faker->firstName(),
                 'lname' => $faker->lastName(),
                 'dob' => $faker->dateTimeBetween('-30 years', '-20 years'),
                 'phone' => $faker->phoneNumber,
+                'address' => $faker->address,
                 'date_of_join' => $faker->dateTimeBetween('-2 years', now()),
                 'status' => 1,
                 'last_login_date' => $faker->dateTimeBetween('-30 days', now()),
                 'last_login_ip' => $faker->ipv4
             ],
             [
-                'classes_id' => 1,
+                'grade_id' => 1,
                 'email' => $faker->email(),
                 'password' => $faker->password(),
                 'fname' => $faker->firstName(),
                 'lname' => $faker->lastName(),
                 'dob' => $faker->dateTimeBetween('-30 years', '-20 years'),
                 'phone' => $faker->phoneNumber,
+                'address' => $faker->address,
                 'date_of_join' => $faker->dateTimeBetween('-2 years', now()),
                 'status' => 2,
                 'last_login_date' => $faker->dateTimeBetween('-30 days', now()),
                 'last_login_ip' => $faker->ipv4
             ],
             [
-                'classes_id' => 2,
+                'grade_id' => 2,
                 'email' => $faker->email(),
                 'password' => $faker->password(),
                 'fname' => $faker->firstName(),
                 'lname' => $faker->lastName(),
                 'dob' => $faker->dateTimeBetween('-30 years', '-20 years'),
                 'phone' => $faker->phoneNumber,
+                'address' => $faker->address,
                 'date_of_join' => $faker->dateTimeBetween('-2 years', now()),
                 'status' => 2,
                 'last_login_date' => $faker->dateTimeBetween('-30 days', now()),
                 'last_login_ip' => $faker->ipv4
             ],
             [
-                'classes_id' => 3,
+                'grade_id' => 3,
                 'email' => $faker->email(),
                 'password' => $faker->password(),
                 'fname' => $faker->firstName(),
                 'lname' => $faker->lastName(),
                 'dob' => $faker->dateTimeBetween('-30 years', '-20 years'),
                 'phone' => $faker->phoneNumber,
+                'address' => $faker->address,
                 'date_of_join' => $faker->dateTimeBetween('-2 years', now()),
                 'status' => 1,
                 'last_login_date' => $faker->dateTimeBetween('-30 days', now()),
                 'last_login_ip' => $faker->ipv4
             ],
             [
-                'classes_id' => 3,
+                'grade_id' => 3,
                 'email' => $faker->email(),
                 'password' => $faker->password(),
                 'fname' => $faker->firstName(),
                 'lname' => $faker->lastName(),
                 'dob' => $faker->dateTimeBetween('-30 years', '-20 years'),
                 'phone' => $faker->phoneNumber,
+                'address' => $faker->address,
                 'date_of_join' => $faker->dateTimeBetween('-2 years', now()),
                 'status' => 3,
                 'last_login_date' => $faker->dateTimeBetween('-30 days', now()),
@@ -306,6 +366,7 @@ class DatabaseSeeder extends Seeder
                 'lname' => 'Thi',
                 'dob' => $faker->dateTimeBetween('-50 years', '-30 years'),
                 'phone' => $faker->phoneNumber(),
+                'address' => $faker->address,
                 'last_login_date' => $faker->dateTimeBetween('-1 years', now()),
                 'last_login_ip' => $faker->ipv4
             ],
@@ -316,6 +377,7 @@ class DatabaseSeeder extends Seeder
                 'lname' => 'Ha',
                 'dob' => $faker->dateTimeBetween('-50 years', '-30 years'),
                 'phone' => $faker->phoneNumber(),
+                'address' => $faker->address,
                 'last_login_date' => $faker->dateTimeBetween('-1 years', now()),
                 'last_login_ip' => $faker->ipv4
             ],
@@ -326,6 +388,7 @@ class DatabaseSeeder extends Seeder
                 'lname' => 'Vu',
                 'dob' => $faker->dateTimeBetween('-50 years', '-30 years'),
                 'phone' => $faker->phoneNumber(),
+                'address' => $faker->address,
                 'last_login_date' => $faker->dateTimeBetween('-1 years', now()),
                 'last_login_ip' => $faker->ipv4
             ],
@@ -338,8 +401,9 @@ class DatabaseSeeder extends Seeder
                 'email' => $faker->email(),
                 'phone' => $faker->phoneNumber(),
                 'dob' => $faker->dateTimeBetween('-30 years', '-18 years'),
-                'e_mark' => rand(0, 10),
-                'visitor_statuses_id' => 1
+                'address' => $faker->address,
+                'status' => 2,
+                'entrance_mark' => rand(0, 10),
             ],
             [
                 'fname' => $faker->firstName(),
@@ -347,8 +411,9 @@ class DatabaseSeeder extends Seeder
                 'email' => $faker->email(),
                 'phone' => $faker->phoneNumber(),
                 'dob' => $faker->dateTimeBetween('-30 years', '-18 years'),
-                'e_mark' => rand(0, 10),
-                'visitor_statuses_id' => 2
+                'address' => $faker->address,
+                'status' => 2,
+                'entrance_mark' => rand(0, 10),
             ],
             [
                 'fname' => $faker->firstName(),
@@ -356,8 +421,9 @@ class DatabaseSeeder extends Seeder
                 'email' => $faker->email(),
                 'phone' => $faker->phoneNumber(),
                 'dob' => $faker->dateTimeBetween('-30 years', '-18 years'),
-                'e_mark' => rand(0, 10),
-                'visitor_statuses_id' => 2
+                'address' => $faker->address,
+                'status' => 1,
+                'entrance_mark' => 0,
             ],
             [
                 'fname' => $faker->firstName(),
@@ -365,8 +431,9 @@ class DatabaseSeeder extends Seeder
                 'email' => $faker->email(),
                 'phone' => $faker->phoneNumber(),
                 'dob' => $faker->dateTimeBetween('-30 years', '-18 years'),
-                'e_mark' => rand(0, 10),
-                'visitor_statuses_id' => 1
+                'address' => $faker->address,
+                'status' => 3,
+                'entrance_mark' => rand(0, 10),
             ],
             [
                 'fname' => $faker->firstName(),
@@ -374,8 +441,9 @@ class DatabaseSeeder extends Seeder
                 'email' => $faker->email(),
                 'phone' => $faker->phoneNumber(),
                 'dob' => $faker->dateTimeBetween('-30 years', '-18 years'),
-                'e_mark' => rand(0, 10),
-                'visitor_statuses_id' => 3
+                'address' => $faker->address,
+                'status' => 3,
+                'entrance_mark' => rand(0, 10),
             ],
             [
                 'fname' => $faker->firstName(),
@@ -383,22 +451,56 @@ class DatabaseSeeder extends Seeder
                 'email' => $faker->email(),
                 'phone' => $faker->phoneNumber(),
                 'dob' => $faker->dateTimeBetween('-30 years', '-18 years'),
-                'e_mark' => rand(0, 10),
-                'visitor_statuses_id' => 1
+                'address' => $faker->address,
+                'status' => 2,
+                'entrance_mark' => rand(0, 10),
             ],
         ]);
 
-        DB::table('visitor_statuses')->insert([
+        DB::table('exam_results')->insert([
             [
-                'description' => 'Đã đăng ký học'
+                'student_id' => 1,
+                'exam_id' => 1,
+                'mark' => 8
             ],
             [
-                'description' => 'Đang đăng ký học'
+                'student_id' => 2,
+                'exam_id' => 1,
+                'mark' => 9
             ],
             [
-                'description' => 'Đã hủy đăng ký học'
-            ]
+                'student_id' => 3,
+                'exam_id' => 1,
+                'mark' => 10
+            ],
+            [
+                'student_id' => 1,
+                'exam_id' => 2,
+                'mark' => 8
+            ],
+            [
+                'student_id' => 2,
+                'exam_id' => 2,
+                'mark' => 5
+            ],
+            [
+                'student_id' => 3,
+                'exam_id' => 2,
+                'mark' => 5
+            ],
         ]);
+
+//        DB::table('visitor_statuses')->insert([
+//            [
+//                'description' => 'Đã đăng ký học'
+//            ],
+//            [
+//                'description' => 'Đang đăng ký học'
+//            ],
+//            [
+//                'description' => 'Đã hủy đăng ký học'
+//            ]
+//        ]);
     }
 
     public function randomNumberSequence($requiredLength = 6, $highestDigit = 9): string

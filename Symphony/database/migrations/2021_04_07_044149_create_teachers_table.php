@@ -21,6 +21,7 @@ class CreateTeachersTable extends Migration
             $table->string('fname');
             $table->string('lname');
             $table->date('dob');
+            $table->string('address', 255);
             $table->string('phone');
             $table->date('last_login_date');
             $table->string('last_login_ip');

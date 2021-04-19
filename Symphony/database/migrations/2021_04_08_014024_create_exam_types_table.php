@@ -16,7 +16,8 @@ class CreateExamTypesTable extends Migration
         Schema::create('exam_types', function (Blueprint $table) {
             $table->id();
 
-            $table->string('description');
+
+            $table->string('name', 100);
 
             $table->timestamps();
         });

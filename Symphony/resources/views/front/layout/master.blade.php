@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="front/OnlineEdu/css/slick.css">
     <link rel="stylesheet" href="front/OnlineEdu/css/nice-select.css">
     <link rel="stylesheet" href="front/OnlineEdu/css/style.css">
+    @yield('styles')
 </head>
 
 <body>
@@ -57,7 +58,9 @@
                         <div class="row d-flex justify-content-between align-items-center">
                             <div class="header-info-left">
                                 <ul>
-                                    <li><a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7d9d2d2d3dfd2dbc7f7d0dad6dedb99d4d8da">[email&#160;protected]</a></li>
+                                    <li><a href="https://preview.colorlib.com/cdn-cgi/l/email-protection"
+                                           class="__cf_email__" data-cfemail="b7d9d2d2d3dfd2dbc7f7d0dad6dedb99d4d8da">[email&#160;protected]</a>
+                                    </li>
                                     <li>666 7475 25252</li>
                                 </ul>
                             </div>
@@ -86,18 +89,23 @@
                         <div class="main-menu d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li class="{{ (request()->segment(1) == '') ? 'active' : '' }}"><a href="/">Home</a></li>
-                                    <li class="{{ (request()->segment(1) == 'about') ? 'active' : '' }}"><a href="about">About</a></li>
-                                    <li class="{{ (request()->segment(1) == 'course') ? 'active' : '' }}"><a href="courses">Courses</a></li>
-                                    <li class="{{ (request()->segment(1) == '') ? 'active' : '' }}"><a href="index">Entrance Exam</a></li>
-                                    <li class="{{ (request()->segment(1) == '') ? 'active' : '' }}"><a href="index">FAQ's</a>
+                                    <li class="{{ (request()->segment(1) == '') ? 'active' : '' }}"><a href="/">Home</a>
+                                    </li>
+                                    <li class="{{ (request()->segment(1) == 'about') ? 'active' : '' }}"><a
+                                            href="about">About</a></li>
+                                    <li class="{{ (request()->segment(1) == 'course') ? 'active' : '' }}"><a
+                                            href="courses">Courses</a></li>
+                                    <li class="{{ (request()->segment(1) == 'entrance_exam') ? 'active' : '' }}"><a
+                                            href="entrance_exam">Entrance Exam</a></li>
+                                    <li class="{{ (request()->segment(1) == 'faq') ? 'active' : '' }}"><a href="faq">FAQ's</a>
                                         {{--<ul class="submenu">
                                             <li><a href="blog.html">Blog</a></li>
                                             <li><a href="blog_details.html">Blog Details</a></li>
                                             <li><a href="elements.html">Element</a></li>
                                         </ul>--}}
                                     </li>
-                                    <li class="{{ (request()->segment(1) == 'contact') ? 'active' : '' }}"><a href="contact">Contact</a></li>
+                                    <li class="{{ (request()->segment(1) == 'contact') ? 'active' : '' }}"><a
+                                            href="contact">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -142,7 +150,8 @@
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p style="color: white">The automated process starts as soon as your clothes go into the machine.</p>
+                                        <p style="color: white">The automated process starts as soon as your clothes go
+                                            into the machine.</p>
                                     </div>
                                 </div>
 
@@ -208,7 +217,8 @@
                         <div class="col-xl-12 ">
                             <div class="footer-copy-right text-center">
                                 <p>
-                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                                    All rights reserved
                                 </p>
                             </div>
                         </div>
@@ -255,11 +265,15 @@
 
 <script src="front/OnlineEdu/js/plugins.js"></script>
 <script src="front/OnlineEdu/js/main.js"></script>
-
+@yield('scripts')
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
 
     gtag('config', 'UA-23581568-13');

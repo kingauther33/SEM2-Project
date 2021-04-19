@@ -16,7 +16,7 @@ class CreateStudentsTable extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
 
-            $table->integer('classes_id')->unsigned();
+            $table->integer('grade_id')->unsigned();
 
             $table->string('email');
             $table->string('password');
@@ -24,6 +24,7 @@ class CreateStudentsTable extends Migration
             $table->string('lname');
             $table->date('dob');
             $table->string('phone');
+            $table->string('address', 255);
             $table->date('date_of_join');
             $table->tinyInteger('status');
             $table->date('last_login_date');
