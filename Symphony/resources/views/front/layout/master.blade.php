@@ -25,8 +25,8 @@
     <link rel="stylesheet" href="front/OnlineEdu/css/style.css">
     @yield('styles')
 </head>
-
 <body>
+
 
 <div id="preloader-active">
     <div class="preloader d-flex align-items-center justify-content-center">
@@ -106,18 +106,20 @@
                                     </li>
                                     <li class="{{ (request()->segment(1) == 'contact') ? 'active' : '' }}"><a
                                             href="contact">Contact</a></li>
+                                    <li class="{{ (request()->segment(1) == 'instructor') ? 'active' : '' }}"><a
+                                            href="instructor">Instructors</a></li>
                                 </ul>
                             </nav>
                         </div>
 
-                        <div class="header-search d-none d-lg-block">
-                            <form action="#" class="form-box f-right ">
-                                <input type="text" name="Search" placeholder="Search Courses">
-                                <div class="search-icon">
-                                    <i class="fas fa-search special-tag"></i>
-                                </div>
-                            </form>
-                        </div>
+{{--                        <div class="header-search d-none d-lg-block">--}}
+{{--                            <form action="#" class="form-box f-right ">--}}
+{{--                                <input type="text" name="Search" placeholder="Search Courses">--}}
+{{--                                <div class="search-icon">--}}
+{{--                                    <i class="fas fa-search special-tag"></i>--}}
+{{--                                </div>--}}
+{{--                            </form>--}}
+{{--                        </div>--}}
                     </div>
 
                     <div class="col-12">
@@ -146,7 +148,7 @@
                             <div class="single-footer-caption mb-30">
 
                                 <div class="footer-logo mb-25">
-                                    <a href="index-2.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                    <a href="/"><img src="front/OnlineEdu/img/logo/loder.png" alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">

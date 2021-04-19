@@ -17,7 +17,7 @@ class Course extends Model
         return $this->hasMany(Subject::class, 'course_id', 'id');
     }
 
-    public function grades() {
+    public function grades(){
         return $this->hasMany(Grade::class, 'grade_id', 'id');
     }
 }

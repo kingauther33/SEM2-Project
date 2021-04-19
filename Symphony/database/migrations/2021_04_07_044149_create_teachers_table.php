@@ -24,6 +24,8 @@ class CreateTeachersTable extends Migration
             $table->date('dob');
             $table->string('address', 255);
             $table->string('phone');
+            $table->string('specialty');
+            $table->string('comment', 1000)->nullable();
             $table->date('last_login_date');
             $table->string('last_login_ip');
 

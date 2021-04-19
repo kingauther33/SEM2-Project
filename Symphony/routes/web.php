@@ -53,3 +53,7 @@ Route::get('/addstudent', [Front\HomeController::class, 'addStudent']);
 Route::get('/addcourse', [Front\HomeController::class, 'addCourse']);
 
 Route::get('/addprofessor', [Front\HomeController::class, 'addProfessor']);
+
+// AN
+
+Route::get('/instructor', [Front\HomeController::class, 'instructor']);

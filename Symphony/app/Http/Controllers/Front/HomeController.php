@@ -3,15 +3,28 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Teacher;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    //
+    // Main (AN)
+
     public function index()
     {
-        return view('front.index');
+        $teachers = Teacher::all();
+
+        return view('front.index', compact('teachers'));
     }
+
+    public function instructor() {
+        $teachers = Teacher::all();
+
+
+        return view('front.instructor.instructor', compact('teachers'));
+    }
+
+    // DUC
 
     public function login()
     {
@@ -52,4 +65,6 @@ class HomeController extends Controller
     {
         return view('front.admin.add.addprofessor');
     }
+
+
 }

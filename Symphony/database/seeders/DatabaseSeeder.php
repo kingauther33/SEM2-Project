@@ -372,7 +372,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('teachers')->insert([
             [
-                'avatar' => 'avatar-0.png',
+                'avatar' => 'team1.png',
                 'email' => $faker->email(),
                 'password' => $faker->password(),
                 'fname' => 'Dang Kim',
@@ -380,11 +380,15 @@ class DatabaseSeeder extends Seeder
                 'dob' => $faker->dateTimeBetween('-50 years', '-30 years'),
                 'phone' => $faker->phoneNumber(),
                 'address' => $faker->address,
+                'specialty' => 'Mainly Back-end',
+                'comment' => 'Students like the interactive games to practice reading and writing. As a teacher, I
+                    love the correlation to standards, and that I am able to see the progress and struggles my students
+                    have in obtaining skills.',
                 'last_login_date' => $faker->dateTimeBetween('-1 years', now()),
                 'last_login_ip' => $faker->ipv4
             ],
             [
-                'avatar' => 'avatar-1.png',
+                'avatar' => 'team2.png',
                 'email' => $faker->email(),
                 'password' => $faker->password(),
                 'fname' => 'Le Thi',
@@ -392,11 +396,15 @@ class DatabaseSeeder extends Seeder
                 'dob' => $faker->dateTimeBetween('-50 years', '-30 years'),
                 'phone' => $faker->phoneNumber(),
                 'address' => $faker->address,
+                'specialty' => 'Mainly Front-end',
+                'comment' => 'OnlineEdu.com has been an invaluable aid to me in teaching my children from home, no matter what
+                    the grade level. It\'s so quick and easy to look for and download specifically what I need in a moment,
+                    and at a most reasonable cost.',
                 'last_login_date' => $faker->dateTimeBetween('-1 years', now()),
                 'last_login_ip' => $faker->ipv4
             ],
             [
-                'avatar' => 'avatar-2.png',
+                'avatar' => 'team3.png',
                 'email' => $faker->email(),
                 'password' => $faker->password(),
                 'fname' => 'Vuong Van',
@@ -404,9 +412,29 @@ class DatabaseSeeder extends Seeder
                 'dob' => $faker->dateTimeBetween('-50 years', '-30 years'),
                 'phone' => $faker->phoneNumber(),
                 'address' => $faker->address,
+                'specialty' => 'Front-end and Back-end',
+                'comment' => 'OnlineEdu.com has been an invaluable aid to me in teaching my children from home, no matter what
+                    the grade level. It\'s so quick and easy to look for and download specifically what I need in a moment,
+                    and at a most reasonable cost.',
                 'last_login_date' => $faker->dateTimeBetween('-1 years', now()),
                 'last_login_ip' => $faker->ipv4
             ],
+            [
+                'avatar' => 'team4.png',
+                'email' => $faker->email(),
+                'password' => $faker->password(),
+                'fname' => 'Trung Van',
+                'lname' => 'Tu',
+                'dob' => $faker->dateTimeBetween('-50 years', '-30 years'),
+                'phone' => $faker->phoneNumber(),
+                'address' => $faker->address,
+                'specialty' => 'Best designer',
+                'comment' => 'OnlineEdu.com has been an invaluable aid to me in teaching my children from home, no matter what
+                    the grade level. It\'s so quick and easy to look for and download specifically what I need in a moment,
+                    and at a most reasonable cost.',
+                'last_login_date' => $faker->dateTimeBetween('-1 years', now()),
+                'last_login_ip' => $faker->ipv4
+            ]
         ]);
 
         DB::table('visitors')->insert([
