@@ -1,1 +1,1 @@
-Update Model, Migration, Seeders
+8:48 19/4: Update Controller, Front(css, js), Migrations, Seeders va route
