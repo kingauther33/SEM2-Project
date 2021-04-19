@@ -18,6 +18,7 @@ class CreateStudentsTable extends Migration
 
             $table->integer('grade_id')->unsigned();
 
+            $table->string('avatar')->nullable();
             $table->string('email');
             $table->string('password');
             $table->string('fname');

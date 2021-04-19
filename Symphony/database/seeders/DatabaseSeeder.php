@@ -171,20 +171,24 @@ class DatabaseSeeder extends Seeder
         DB::table('courses')->insert([
             [
                 'name' => 'Khoa hoc co ban (4 thang)',
-                'summary' => 'Ban se nam bat duoc tat ca nhung thu co ban ve code'
+                'summary' => 'Ban se nam bat duoc tat ca nhung thu co ban ve code',
+                'image_path' => 'popular_sub1.png'
             ],
             [
                 'name' => 'Khoa hoc nang cao (6 thang)',
-                'summary' => 'Ban se nam bat duoc nhung thu nang cao ve code'
+                'summary' => 'Ban se nam bat duoc nhung thu nang cao ve code',
+                'image_path' => 'popular_sub2.png'
             ],
             [
                 'name' => 'Khoa hoc master (12 thang)',
-                'summary' => 'Ban se dung duoc cac framework, hieu duoc co ban va nang cao ve code'
+                'summary' => 'Ban se dung duoc cac framework, hieu duoc co ban va nang cao ve code',
+                'image_path' => 'popular_sub3.png'
             ]
         ]);
 
         DB::table('training_departments')->insert([
             [
+                'avatar' => 'avatar-0.png',
                 'email' => 'tungtran102@fpt.edu.vn',
                 'password' => $faker->password,
                 'fname' => 'Tran',
@@ -195,6 +199,7 @@ class DatabaseSeeder extends Seeder
                 'last_login_ip' => $faker->ipv4
             ],
             [
+                'avatar' => 'avatar-1.png',
                 'email' => 'toanngo123@fpt.edu.vn',
                 'password' => $faker->password,
                 'fname' => 'Ngo',
@@ -205,6 +210,7 @@ class DatabaseSeeder extends Seeder
                 'last_login_ip' => $faker->ipv4
             ],
             [
+                'avatar' => null,
                 'email' => 'thieutoan123@fpt.edu.vn',
                 'password' => $faker->password,
                 'fname' => 'Thieu',
@@ -273,6 +279,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('students')->insert([
             [
+                'avatar' => 'avatar-0.png',
                 'grade_id' => 1,
                 'email' => $faker->email(),
                 'password' => $faker->password(),
@@ -287,6 +294,7 @@ class DatabaseSeeder extends Seeder
                 'last_login_ip' => $faker->ipv4
             ],
             [
+                'avatar' => 'avatar-1.png',
                 'grade_id' => 1,
                 'email' => $faker->email(),
                 'password' => $faker->password(),
@@ -301,6 +309,7 @@ class DatabaseSeeder extends Seeder
                 'last_login_ip' => $faker->ipv4
             ],
             [
+                'avatar' => null,
                 'grade_id' => 1,
                 'email' => $faker->email(),
                 'password' => $faker->password(),
@@ -315,6 +324,7 @@ class DatabaseSeeder extends Seeder
                 'last_login_ip' => $faker->ipv4
             ],
             [
+                'avatar' => 'avatar-2.png',
                 'grade_id' => 2,
                 'email' => $faker->email(),
                 'password' => $faker->password(),
@@ -329,6 +339,7 @@ class DatabaseSeeder extends Seeder
                 'last_login_ip' => $faker->ipv4
             ],
             [
+                'avatar' => null,
                 'grade_id' => 3,
                 'email' => $faker->email(),
                 'password' => $faker->password(),
@@ -343,6 +354,7 @@ class DatabaseSeeder extends Seeder
                 'last_login_ip' => $faker->ipv4
             ],
             [
+                'avatar' => null,
                 'grade_id' => 3,
                 'email' => $faker->email(),
                 'password' => $faker->password(),
@@ -360,6 +372,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('teachers')->insert([
             [
+                'avatar' => 'avatar-0.png',
                 'email' => $faker->email(),
                 'password' => $faker->password(),
                 'fname' => 'Dang Kim',
@@ -371,6 +384,7 @@ class DatabaseSeeder extends Seeder
                 'last_login_ip' => $faker->ipv4
             ],
             [
+                'avatar' => 'avatar-1.png',
                 'email' => $faker->email(),
                 'password' => $faker->password(),
                 'fname' => 'Le Thi',
@@ -382,6 +396,7 @@ class DatabaseSeeder extends Seeder
                 'last_login_ip' => $faker->ipv4
             ],
             [
+                'avatar' => 'avatar-2.png',
                 'email' => $faker->email(),
                 'password' => $faker->password(),
                 'fname' => 'Vuong Van',
