@@ -18,6 +18,7 @@ class CreateCoursesTable extends Migration
 
             $table->string('name', 255);
             $table->string('summary', 255);
+            $table->string('image_path');
 
             $table->timestamps();
         });

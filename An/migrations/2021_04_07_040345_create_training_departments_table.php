@@ -16,6 +16,7 @@ class CreateTrainingDepartmentsTable extends Migration
         Schema::create('training_departments', function (Blueprint $table) {
             $table->id();
 
+            $table->string('avatar')->nullable();
             $table->string('email');
             $table->string('password');
             $table->string('fname');
