@@ -8,13 +8,22 @@
 
         <div class="container">
             <h2 class="mb-5">Classes</h2>
-
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-6">
+                    <div class="btn-group">
+                        <a class="btn btn-info {{ (request()->segment(1) == 'addCourse') ? 'active' : '' }}" href="addcourse" id="addRow">
+                            Add New
+                            <i class="fa fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
             <div class="table-responsive custom-table-responsive">
 
                 <table class="table custom-table">
                     <thead>
-                    <tr>
+                    <tr role="row">
 
                         <th scope="col">
                             <label class="control control--checkbox">
@@ -35,7 +44,7 @@
                         <th scope="row">
                             <label class="control control--checkbox">
                                 <input type="checkbox"/>
-                                <div class="control__inpublic/front/admin/dicator"></div>
+                                <div class="control__indicator"></div>
                             </label>
                         </th>
                         <td>
@@ -47,7 +56,7 @@
                             <small class="d-block">Far far away, behind the word mountains</small>
                         </td>
                         <td>+63 983 0962 971</td>
-                        <td>NY University</td>
+                        <td>abc@gmail.com</td>
                     </tr>
                     <tr class="spacer"><td colspan="100"></td></tr>
                     <tr class="active">
@@ -65,7 +74,7 @@
                             <small class="d-block">Far far away, behind the word mountains</small>
                         </td>
                         <td>+02 020 3994 929</td>
-                        <td>London College</td>
+                        <td>aaa@gmail.com</td>
                     </tr>
                     <tr class="spacer"><td colspan="100"></td></tr>
                     <tr>
@@ -101,7 +110,7 @@
                             <small class="d-block">Far far away, behind the word mountains</small>
                         </td>
                         <td>+92 020 3994 929</td>
-                        <td>College</td>
+                        <td>bbb@gmail.com</td>
                     </tr>
 
                     </tbody>
@@ -111,9 +120,11 @@
 
         </div>
 
+        @section('script')
         <script src="front/admin/js/jquery-3.3.1.min.js"></script>
         <script src="front/admin/js/popper.min.js"></script>
         <script src="front/admin/js/bootstrap.min.js"></script>
         <script src="front/admin/js/main.js"></script>
+        @endsection
     </div>
 @endsection
