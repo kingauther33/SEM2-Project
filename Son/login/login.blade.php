@@ -19,6 +19,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4">
                 <div class="login-wrap p-0">
+                    <br>
                     <h3 class="mb-4 text-center">Have an account?</h3>
                     <form action="#" class="signin-form">
                         <div class="form-group">
@@ -43,10 +44,8 @@
                             </div>
                         </div>
                     </form>
-                    <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
                     <div class="social d-flex text-center">
-                        <a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Facebook</a>
-                        <a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Twitter</a>
+                       <br><br>
                     </div>
                 </div>
             </div>
