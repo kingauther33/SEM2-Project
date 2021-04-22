@@ -21,7 +21,6 @@ class HomeController extends Controller
     public function instructor() {
         $teachers = Teacher::all();
 
-
         return view('front.instructor.instructor', compact('teachers'));
     }
 

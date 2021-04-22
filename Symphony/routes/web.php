@@ -57,3 +57,5 @@ Route::get('/addprofessor', [Front\HomeController::class, 'addProfessor']);
 // AN
 
 Route::get('/instructor', [Front\HomeController::class, 'instructor']);
+
+Route::post('/contact', [Front\HomeController::class, 'subscribe']);
