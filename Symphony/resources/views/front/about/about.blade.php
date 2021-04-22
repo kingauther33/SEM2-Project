@@ -4,6 +4,7 @@
 
 @section('styles')
     <link rel="stylesheet" href="front/OnlineEdu/css/testimonial.css">
+    <link rel="stylesheet" href="front/OnlineEdu/css/about.css">
 @endsection
 
 @section('body')

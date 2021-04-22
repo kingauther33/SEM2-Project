@@ -22,7 +22,7 @@
                                         With Us!</h1>
 
                                     <div class="hero__btn">
-                                        <a href="industries.html" class="btn hero-btn" data-animation="fadeInLeft"
+                                        <a href="contact" class="btn hero-btn" data-animation="fadeInLeft"
                                            data-delay=".8s">Get Started</a>
                                     </div>
                                 </div>
@@ -184,7 +184,8 @@
         </div>
 
         {{--  Categories thừa--}}
-        {{--<div class="categories-area section-padding30">
+        {{--
+        <div class="categories-area section-padding30">
             <div class="container">
                 <div class="row justify-content-sm-center">
                     <div class="cl-xl-7 col-lg-8 col-md-10">
@@ -284,7 +285,8 @@
                     </div>
                 </div>
             </div>
-        </div>--}}
+        </div>
+--}}
 
         {{--  Count Down (AN) --}}
         <div class="count-down-area pt-10 pb-60 section-bg mb-100"

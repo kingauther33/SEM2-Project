@@ -152,7 +152,7 @@ class DatabaseSeeder extends Seeder
                 'name' => 'An In Lieu Eiu'
             ],
             [
-                'course_id' => 1,
+                'course_id' => 2,
                 'acronym' => 'BMEI',
                 'name' => 'Bi Mu En Ieu'
             ],
@@ -162,10 +162,15 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Khong Mua Ieu Jieu'
             ],
             [
-                'course_id' => 2,
+                'course_id' => 3,
                 'acronym' => 'KEUJ',
                 'name' => 'Keu Eun Uoi Jeu'
-            ]
+            ],
+            [
+                'course_id' => 3,
+                'acronym' => 'KFJM',
+                'name' => 'Ka Fe Ji Man'
+            ],
         ]);
 
         DB::table('courses')->insert([
@@ -413,9 +418,9 @@ class DatabaseSeeder extends Seeder
                 'phone' => $faker->phoneNumber(),
                 'address' => $faker->address,
                 'specialty' => 'Front-end and Back-end',
-                'comment' => 'OnlineEdu.com has been an invaluable aid to me in teaching my children from home, no matter what
-                    the grade level. It\'s so quick and easy to look for and download specifically what I need in a moment,
-                    and at a most reasonable cost.',
+                'comment' => 'Students like the interactive games to practice reading and writing. As a teacher, I
+                    love the correlation to standards, and that I am able to see the progress and struggles my students
+                    have in obtaining skills.',
                 'last_login_date' => $faker->dateTimeBetween('-1 years', now()),
                 'last_login_ip' => $faker->ipv4
             ],
