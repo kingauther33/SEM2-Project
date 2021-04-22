@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Teacher;
+use App\Models\Visitor;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -66,5 +67,16 @@ class HomeController extends Controller
         return view('front.admin.add.addprofessor');
     }
 
+    public function subscribe(Request $request) {
+        $subcribe = new Visitor();
+        $subcribe->fname = $request->fname;
+        $subcribe->lname = $request->lname;
+        $subcribe->email = $request->email;
+        $subcribe->phone = $request->phone;
+        $subcribe->address = $request->address;
 
+        $subcribe->save();
+
+        return redirect()->back();
+    }
 }

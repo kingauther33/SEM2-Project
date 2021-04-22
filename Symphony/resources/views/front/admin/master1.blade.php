@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="front/admin/css/bootstrap.min.css">
 
     <!-- Style -->
+    <link rel="stylesheet" href="front/admin/css/1.css">
     <link rel="stylesheet" href="front/admin/css/style.css">
     <link rel="stylesheet" href="front/OnlineEdu/css/style.css">
     <link rel="stylesheet" href="front/OnlineEdu/css/owl.carousel.min.css">
@@ -29,6 +30,8 @@
     <link rel="stylesheet" href="front/OnlineEdu/css/bootstrap.min.css">
 
     <title>@yield('title') | Symphony</title>
+
+    @yield('style')
 </head>
 <body>
 
@@ -113,7 +116,7 @@
                 <div class="main-menu d-none d-lg-block">
                     <nav>
                         <ul id="navigation">
-                            <li class="{{ (request()->segment(1) == 'admin') ? 'active' : '' }}"><a href="">Admin</a></li>
+                            <li class="{{ (request()->segment(1) == 'admin') ? 'active' : '' }}"><a href="admin">Admin</a></li>
                             <li class="{{ (request()->segment(1) == 'staff') ? 'active' : '' }}"><a href="staff">Staff</a>
                                 <ul class="submenu">
                                     <li><a href="#">All Teachers</a></li>
@@ -191,6 +194,7 @@
 
 <script src="front/OnlineEdu/js/plugins.js"></script>
 <script src="front/OnlineEdu/js/main.js"></script>
+@yield('script')
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>
