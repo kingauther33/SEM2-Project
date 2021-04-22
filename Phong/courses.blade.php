@@ -87,6 +87,7 @@
                                                                                 <span aria-hidden="true">&times;</span>
                                                                             </button>
                                                                         </div>
+                                                                        <form action="courses" method="post">
                                                                         <div class="modal-body">
                                                                             <label for="cars">Choose course:</label><br>
                                                                             <select id="cars">
@@ -94,10 +95,9 @@
                                                                                 <option value="course 2">Course 2 (6 month)</option>
                                                                                 <option value="course 3">Course 3 (12 month)</option>
                                                                             </select><br><br>
-                                                                            <form>
                                                                                 <div class="form-group">
                                                                                     <label for="exampleInputEmail1">Enter Email</label>
-                                                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
+                                                                                    <input type="email" class="form-control" name="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <label for="exampleInput">Enter Name</label>
@@ -107,12 +107,15 @@
                                                                                     <label for="exampleInput">Enter Phone</label>
                                                                                     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Phone">
                                                                                 </div>
-                                                                            </form>
                                                                         </div>
+                                                                        </form>
+
                                                                         <div class="modal-footer">
+
                                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                                                            <button type="submit" class="btn btn-primary" onclick="myFunction()">Submit</button>
                                                                         </div>
+                                                                        <div class="col-xl-14" style="padding-left: 20px"><p id="demo"></p></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -135,7 +138,7 @@
                                                         </div>
                                                         <div class="course-cap-mid d-flex justify-content-between">
                                                             <div class="course-ratting">
-                                                                <ul>Name Subject:
+                                                                <ul>Name Subject
                                                                     <li><br><i class="fas fa-star"></i>Bi Mu En Ieu</li>
                                                                     <li><i class="fas fa-star"></i>Khong Mua Ieu Jieu</li><br>
                                                                 </ul>
