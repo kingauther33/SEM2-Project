@@ -26,23 +26,23 @@
                 <div class="row">
                     <div class="all-course-wrapper">
 
-                        {{--                        <div class="row mb-15">--}}
-                        {{--                            <div class="col-lg-12">--}}
-                        {{--                                <div class="properties__button mb-90">--}}
+{{--                        <div class="row mb-15">--}}
+{{--                            <div class="col-lg-12">--}}
+{{--                                <div class="properties__button mb-90">--}}
 
-                        {{--                                    <nav>--}}
-                        {{--                                        <div class="nav nav-tabs" id="nav-tab" role="tablist">--}}
-                        {{--                                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">All</a>--}}
-                        {{--                                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Web</a>--}}
-                        {{--                                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Graphic</a>--}}
-                        {{--                                            <a class="nav-item nav-link" id="nav-last-tab" data-toggle="tab" href="#nav-last" role="tab" aria-controls="nav-contact" aria-selected="false">Video</a>--}}
-                        {{--                                            <a class="nav-item nav-link" id="nav-Sports" data-toggle="tab" href="#nav-nav-Sport" role="tab" aria-controls="nav-contact" aria-selected="false">Language</a>--}}
-                        {{--                                        </div>--}}
-                        {{--                                    </nav>--}}
+{{--                                    <nav>--}}
+{{--                                        <div class="nav nav-tabs" id="nav-tab" role="tablist">--}}
+{{--                                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">All</a>--}}
+{{--                                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Web</a>--}}
+{{--                                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Graphic</a>--}}
+{{--                                            <a class="nav-item nav-link" id="nav-last-tab" data-toggle="tab" href="#nav-last" role="tab" aria-controls="nav-contact" aria-selected="false">Video</a>--}}
+{{--                                            <a class="nav-item nav-link" id="nav-Sports" data-toggle="tab" href="#nav-nav-Sport" role="tab" aria-controls="nav-contact" aria-selected="false">Language</a>--}}
+{{--                                        </div>--}}
+{{--                                    </nav>--}}
 
-                        {{--                                </div>--}}
-                        {{--                            </div>--}}
-                        {{--                        </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
                         <div class="row">
                             <div class="col-12">
@@ -88,13 +88,13 @@
                                                                             </button>
                                                                         </div>
                                                                         <form action="courses" method="post">
-                                                                            <div class="modal-body">
-                                                                                <label for="cars">Choose course:</label><br>
-                                                                                <select id="cars">
-                                                                                    <option value="course 1">Course 1 (3 month)</option>
-                                                                                    <option value="course 2">Course 2 (6 month)</option>
-                                                                                    <option value="course 3">Course 3 (12 month)</option>
-                                                                                </select><br><br>
+                                                                        <div class="modal-body">
+                                                                            <label for="cars">Choose course:</label><br>
+                                                                            <select id="cars">
+                                                                                <option value="course 1">Course 1 (3 month)</option>
+                                                                                <option value="course 2">Course 2 (6 month)</option>
+                                                                                <option value="course 3">Course 3 (12 month)</option>
+                                                                            </select><br><br>
                                                                                 <div class="form-group">
                                                                                     <label for="exampleInputEmail1">Enter Email</label>
                                                                                     <input type="email" class="form-control" name="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
@@ -107,7 +107,7 @@
                                                                                     <label for="exampleInput">Enter Phone</label>
                                                                                     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Phone">
                                                                                 </div>
-                                                                            </div>
+                                                                        </div>
                                                                         </form>
 
                                                                         <div class="modal-footer">
