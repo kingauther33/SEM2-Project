@@ -20,13 +20,20 @@ use Illuminate\Support\Facades\Route;
 //    return \App\Models\Exam::find(1)->exam_type;
 //});
 
+// AN
+
+
 Route::get('/', [Front\HomeController::class, 'index']);
 
-Route::get('/courses', [Front\CourseController::class, 'course']);
 
 Route::get('/about', [Front\CourseController::class, 'about']);
 
 Route::get('/contact', [Front\CourseController::class, 'contact']);
+
+Route::get('/instructor', [Front\HomeController::class, 'instructor']);
+
+Route::post('/contact', [Front\HomeController::class, 'subscribe']);
+
 
 // HIEU
 
@@ -54,8 +61,9 @@ Route::get('/addcourse', [Front\HomeController::class, 'addCourse']);
 
 Route::get('/addprofessor', [Front\HomeController::class, 'addProfessor']);
 
-// AN
+//Phong
 
-Route::get('/instructor', [Front\HomeController::class, 'instructor']);
+Route::post('/courses', [Front\CourseController::class, 'new_course']);
 
-Route::post('/contact', [Front\HomeController::class, 'subscribe']);
+Route::get('/courses', [Front\CourseController::class, 'course']);
+

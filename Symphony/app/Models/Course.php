@@ -20,4 +20,8 @@ class Course extends Model
     public function grades(){
         return $this->hasMany(Grade::class, 'grade_id', 'id');
     }
+
+    public function visitors() {
+        return $this->hasMany(Visitor::class, 'course_id', 'id');
+    }
 }

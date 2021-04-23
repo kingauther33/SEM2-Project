@@ -452,6 +452,7 @@ class DatabaseSeeder extends Seeder
                 'address' => $faker->address,
                 'status' => 2,
                 'entrance_mark' => rand(0, 10),
+                'course_id' => 1
             ],
             [
                 'fname' => $faker->firstName(),
@@ -462,6 +463,7 @@ class DatabaseSeeder extends Seeder
                 'address' => $faker->address,
                 'status' => 2,
                 'entrance_mark' => rand(0, 10),
+                'course_id' => 1
             ],
             [
                 'fname' => $faker->firstName(),
@@ -472,6 +474,7 @@ class DatabaseSeeder extends Seeder
                 'address' => $faker->address,
                 'status' => 1,
                 'entrance_mark' => 0,
+                'course_id' => 2
             ],
             [
                 'fname' => $faker->firstName(),
@@ -482,6 +485,7 @@ class DatabaseSeeder extends Seeder
                 'address' => $faker->address,
                 'status' => 3,
                 'entrance_mark' => rand(0, 10),
+                'course_id' => 3
             ],
             [
                 'fname' => $faker->firstName(),
@@ -492,6 +496,7 @@ class DatabaseSeeder extends Seeder
                 'address' => $faker->address,
                 'status' => 3,
                 'entrance_mark' => rand(0, 10),
+                'course_id' => 2
             ],
             [
                 'fname' => $faker->firstName(),
@@ -502,6 +507,7 @@ class DatabaseSeeder extends Seeder
                 'address' => $faker->address,
                 'status' => 2,
                 'entrance_mark' => rand(0, 10),
+                'course_id' => 2
             ],
         ]);
 

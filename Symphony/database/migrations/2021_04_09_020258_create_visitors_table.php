@@ -24,6 +24,7 @@ class CreateVisitorsTable extends Migration
             $table->string('address', 255)->nullable();
             $table->tinyInteger('status')->nullable();
             $table->integer('entrance_mark')->nullable();
+            $table->integer('course_id');
 
 
             $table->timestamps();

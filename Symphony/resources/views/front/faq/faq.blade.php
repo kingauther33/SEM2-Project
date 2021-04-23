@@ -67,5 +67,5 @@
 @endsection
 
 @section('scripts')
-    <link rel="stylesheet" href="front/OnlineEdu/js/faq.js">
+    <script src="front/OnlineEdu/js/faq.js"></script>
 @endsection

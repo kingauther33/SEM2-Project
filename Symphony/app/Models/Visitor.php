@@ -11,4 +11,9 @@ class Visitor extends Model
 
     protected $table = 'visitors';
     protected $primaryKey = 'id';
-    protected $guarded = [];}
+    protected $guarded = [];
+
+    public function course() {
+        return $this->belongsTo(Course::class, 'course_id', 'id');
+    }
+}

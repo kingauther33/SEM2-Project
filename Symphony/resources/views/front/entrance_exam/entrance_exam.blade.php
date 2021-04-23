@@ -23,10 +23,11 @@
                         level and for the participants having the minimum knowledge about the basics will be segregated
                         in to the class where they direct start with the basic certification topics with out touching
                         the basic concepts of the subject.</p>
-                    <p><a href="search_exam" class="lmao">Click here for grades</a></p>
+
                     <p><a href="contact" class="btn__entrance">Join This Program</a></p>
                 </div>
             </div>
+            <p><a href="search_exam" class="lmao"><span class="fa fa-star"></span>    Click here for grades</a></p>
         </div>
     </div>
 

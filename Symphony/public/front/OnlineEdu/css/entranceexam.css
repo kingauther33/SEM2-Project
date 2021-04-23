@@ -44,8 +44,8 @@
     background: #fd7e14; }
 .btn__entrance {
     position: relative;
-    background-color: #f0f0f0;
-    border: 2px solid #2d3092;
+    background-color: white;
+    border: none;
     color: #2d3092;
     text-align: center;
     text-decoration: none;
@@ -55,6 +55,8 @@
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 5px;
+    padding: 8px;
+    border-radius: 8px;
 }
 .btn__entrance:hover {
     background-color: #2d3092;
@@ -64,6 +66,14 @@
     max-width: 100%;
 }
 .lmao{
-    color: #10285d;
+    color: white;
+    background-color: #5d4514;
+    padding: 7px;
+    border-radius: 5px;
 }
-
+.lmao:hover{
+    color: white;
+    background-color: green;
+    padding: 7px;
+    border-radius: 5px;
+}
