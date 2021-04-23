@@ -1,0 +1,15 @@
+Thêm:
+ Route::post('/courses', [Front\CourseController::class, 'new_course']);
+và 
+public function new_course(Request $request) {
+        $subcribe = new Visitor();
+        $subcribe->fname = $request->fname;
+        $subcribe->lname = $request->lname;
+        $subcribe->email = $request->email;
+        $subcribe->phone = $request->phone;
+        $subcribe->address = $request->address;
+
+        $subcribe->save();
+
+        return redirect()->back();
+    }
