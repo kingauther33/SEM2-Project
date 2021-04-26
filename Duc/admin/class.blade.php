@@ -25,100 +25,53 @@
                     <thead>
                     <tr role="row">
 
-                        <th scope="col">
-                            <label class="control control--checkbox">
-                                <input type="checkbox"  class="js-check-all"/>
-                                <div class="control__indicator"></div>
-                            </label>
-                        </th>
+{{--                        <th scope="col">--}}
+{{--                            <label class="control control--checkbox">--}}
+{{--                                <input type="checkbox"  class="js-check-all"/>--}}
+{{--                                <div class="control__indicator"></div>--}}
+{{--                            </label>--}}
+{{--                        </th>--}}
 
-                        <th scope="col">Order</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Occupation</th>
-                        <th scope="col">Contact</th>
-                        <th scope="col">Education</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Professor ID</th>
+                        <th scope="col">Course ID</th>
+                        <th scope="col">Options</th>
                     </tr>
                     </thead>
                     <tbody>
+                    @foreach($grades as $grade)
                     <tr scope="row">
-                        <th scope="row">
-                            <label class="control control--checkbox">
-                                <input type="checkbox"/>
-                                <div class="control__indicator"></div>
-                            </label>
-                        </th>
+{{--                        <th scope="row">--}}
+{{--                            <label class="control control--checkbox">--}}
+{{--                                <input type="checkbox"/>--}}
+{{--                                <div class="control__indicator"></div>--}}
+{{--                            </label>--}}
+{{--                        </th>--}}
                         <td>
-                            1392
+                            <a>{{ $grade->name }}</a>
                         </td>
-                        <td><a>James Yates</a></td>
+                        <td>{{ $grade->year }}</td>
+                        <td>{{ $grade->description }}</td>
+                        <td>{{ $grade->teacher_id }}</td>
+                        <td>{{ $grade->course_id }}</td>
                         <td>
-                            Web Designer
-                            <small class="d-block">Far far away, behind the word mountains</small>
+                            <span class="btn btn-sm btn-danger btn_row_edit" style="background: #17a2b8; border-color: #17a2b8"><i class="fa fa-edit"></i></span>
+                            <span class="btn btn-sm btn-danger btn_row_delete"><i class="fa fa-trash"></i></span>
                         </td>
-                        <td>+63 983 0962 971</td>
-                        <td>abc@gmail.com</td>
                     </tr>
                     <tr class="spacer"><td colspan="100"></td></tr>
-                    <tr class="active">
-                        <th scope="row">
-                            <label class="control control--checkbox">
-                                <input type="checkbox" checked="" />
-                                <div class="control__indicator"></div>
-                            </label>
-                        </th>
-
-                        <td>4616</td>
-                        <td><a>Matthew Wasil</a></td>
-                        <td>
-                            Graphic Designer
-                            <small class="d-block">Far far away, behind the word mountains</small>
-                        </td>
-                        <td>+02 020 3994 929</td>
-                        <td>aaa@gmail.com</td>
-                    </tr>
-                    <tr class="spacer"><td colspan="100"></td></tr>
-                    <tr>
-                        <th scope="row">
-                            <label class="control control--checkbox">
-                                <input type="checkbox"/>
-                                <div class="control__indicator"></div>
-                            </label>
-                        </th>
-
-                        <td>9841</td>
-                        <td><a>Sampson Murphy</a></td>
-                        <td>
-                            Mobile Dev
-                            <small class="d-block">Far far away, behind the word mountains</small>
-                        </td>
-                        <td>+01 352 1125 0192</td>
-                        <td>Senior High</td>
-                    </tr>
-                    <tr class="spacer"><td colspan="100"></td></tr>
-                    <tr>
-                        <th scope="row">
-                            <label class="control control--checkbox">
-                                <input type="checkbox"/>
-                                <div class="control__indicator"></div>
-                            </label>
-                        </th>
-
-                        <td>9548</td>
-                        <td><a>Gaspar Semenov</a></td>
-                        <td>
-                            Illustrator
-                            <small class="d-block">Far far away, behind the word mountains</small>
-                        </td>
-                        <td>+92 020 3994 929</td>
-                        <td>bbb@gmail.com</td>
-                    </tr>
-
+                    @endforeach
                     </tbody>
                 </table>
-
             </div>
-
         </div>
+
+        @section('style')
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        @endsection
 
         @section('script')
         <script src="front/admin/js/jquery-3.3.1.min.js"></script>

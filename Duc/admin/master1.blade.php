@@ -116,7 +116,7 @@
                 <div class="main-menu d-none d-lg-block">
                     <nav>
                         <ul id="navigation">
-                            <li class="{{ (request()->segment(1) == 'admin') ? 'active' : '' }}"><a href="admin">Admin</a></li>
+                            <li class="{{ (request()->segment(1) == 'counselor') ? 'active' : '' }}"><a href="counselor">Counselor</a></li>
                             <li class="{{ (request()->segment(1) == 'staff') ? 'active' : '' }}"><a href="staff">Staff</a>
                                 <ul class="submenu">
                                     <li><a href="#">All Teachers</a></li>

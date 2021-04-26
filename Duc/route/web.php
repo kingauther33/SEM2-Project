@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+//// *** De kiem tra du lieu voi Model da chuan chua (JSON Formatter)
+//Route::get('/', function () {
+//    return \App\Models\Exam::find(1)->exam_type;
+//});
+
 Route::get('/', [Front\HomeController::class, 'index']);
 
 Route::get('/courses', [Front\CourseController::class, 'course']);
@@ -22,18 +28,52 @@ Route::get('/about', [Front\CourseController::class, 'about']);
 
 Route::get('/contact', [Front\CourseController::class, 'contact']);
 
+// HIEU
+
+Route::get('/faq', [Front\CourseController::class, 'faq']);
+
+Route::get('/entrance_exam', [Front\CourseController::class, 'entrance_exam']);
+
+Route::get('/search_exam', [Front\CourseController::class, 'search_exam']);
+
+// DUC
+
 Route::get('/login', [Front\HomeController::class, 'login']);
 
-Route::get('/admin', [Front\HomeController::class, 'admin']);
+Route::get('/admin', [Front\AdminController::class, 'admin']);
 
-Route::get('/staff', [Front\HomeController::class, 'staff']);
+Route::get('/staff', [Front\AdminController::class, 'staff']);
 
-Route::get('/student', [Front\HomeController::class, 'student']);
+Route::get('/student', [Front\AdminController::class, 'student']);
 
-Route::get('/class', [Front\HomeController::class, 'class']);
+Route::get('/class', [Front\AdminController::class, 'class']);
 
-Route::get('/addstudent', [Front\HomeController::class, 'addStudent']);
+Route::get('/counselor', [Front\AdminController::class, 'counselor']);
 
-Route::get('/addcourse', [Front\HomeController::class, 'addCourse']);
+Route::get('/addstudent', [Front\AdminController::class, 'addStudent']);
 
-Route::get('/addprofessor', [Front\HomeController::class, 'addProfessor']);
+Route::post('/addstudent', [Front\AdminController::class, 'addStudent1']);
+
+Route::get('/addcourse', [Front\AdminController::class, 'addCourse']);
+
+Route::post('/addcourse', [Front\AdminController::class, 'addCourse1']);
+
+Route::get('/addprofessor', [Front\AdminController::class, 'addProfessor']);
+
+Route::post('/addprofessor', [Front\AdminController::class, 'addProfessor1']);
+
+Route::get('/addcounselor', [Front\AdminController::class, 'addCounselor']);
+
+Route::post('/addcounselor', [Front\AdminController::class, 'addCounselor1']);
+
+// AN
+
+Route::get('/instructor', [Front\HomeController::class, 'instructor']);
+
+Route::post('/contact', [Front\HomeController::class, 'subscribe']);
+
+// PHONG
+
+Route::post('/courses', [Front\CourseController::class, 'new_course']);
+
+Route::get('sssss', [Front\AdminController::class, 'sssss']);
