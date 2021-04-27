@@ -89,7 +89,7 @@
                                                                     <div class="modal-content">
                                                                         <div class="modal-header">
                                                                             <h5 class="modal-title"
-                                                                                id="exampleModalLabel">Infomation</h5>
+                                                                                id="exampleModalLabel">Information</h5>
                                                                             <button type="button" class="close"
                                                                                     data-dismiss="modal"
                                                                                     aria-label="Close">
@@ -99,53 +99,69 @@
                                                                         <form action="courses" method="post">
                                                                             @csrf
                                                                             <div class="modal-body">
-                                                                                {{--                                                                                <label for="cars">Choose course:</label><br>--}}
-                                                                                {{--                                                                                <select id="cars">--}}
-                                                                                {{--                                                                                    <option value="course 1">Course 1 (3 month)</option>--}}
-                                                                                {{--                                                                                    <option value="course 2">Course 2 (6 month)</option>--}}
-                                                                                {{--                                                                                    <option value="course 3">Course 3 (12 month)</option>--}}
-                                                                                {{--                                                                                </select><br><br>--}}
                                                                                 <div class="form-group">
-                                                                                    <label for="exampleInputEmail1">Enter
+                                                                                    <label for="exampleInputEmail1">
                                                                                         Email</label>
                                                                                     <input type="email"
                                                                                            class="form-control"
                                                                                            name="email"
                                                                                            aria-describedby="emailHelp"
-                                                                                           placeholder="Enter Email" required>
+                                                                                           placeholder="Enter Email">
+                                                                                    <span class="text-danger">
+                                                                                        @error('email')
+                                                                                            <script type='text/javascript'>alert('wrong try again!!');</script>
+                                                                                        @enderror
+                                                                                    </span>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <label for="exampleInput">Enter
+                                                                                    <label for="exampleInput">
+                                                                                        Name Course</label>
+                                                                                    <input type="number"
+                                                                                           class="form-control"
+                                                                                           name="course_id"
+                                                                                           placeholder="Enter number course[1-3]">
+                                                                                    <span class="text-danger">
+                                                                                        @error('course_id')
+                                                                                            <script type='text/javascript'>alert('wrong try again!!');</script>
+                                                                                        @enderror
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="exampleInput">
                                                                                         First Name</label>
                                                                                     <input type="text"
                                                                                            class="form-control valid"
                                                                                            name="fname"
-                                                                                           placeholder="Enter First Name" required>
+                                                                                           placeholder="Enter First Name"
+                                                                                           required>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <label for="exampleInput">Enter
+                                                                                    <label for="exampleInput">
                                                                                         Last Name</label>
                                                                                     <input type="text"
                                                                                            class="form-control valid"
                                                                                            name="lname"
-                                                                                           placeholder="Enter Last Name" required>
+                                                                                           placeholder="Enter Last Name"
+                                                                                           required>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <label for="exampleInput">Enter
+                                                                                    <label for="exampleInput">
                                                                                         Phone</label>
                                                                                     <input type="number"
                                                                                            class="form-control"
                                                                                            id="phone"
                                                                                            name="phone"
-                                                                                           placeholder="Enter Phone" required>
+                                                                                           placeholder="Enter Phone"
+                                                                                           required>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <label for="exampleInput">Enter
+                                                                                    <label for="exampleInput">
                                                                                         Address</label>
                                                                                     <input type="text"
                                                                                            class="form-control"
                                                                                            name="address"
-                                                                                           placeholder="Enter Address" required>
+                                                                                           placeholder="Enter Address"
+                                                                                           required>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="modal-footer">
@@ -156,12 +172,11 @@
                                                                                 </button>
                                                                                 <button type="submit"
                                                                                         class="btn btn-primary"
+
                                                                                 >Submit
                                                                                 </button>
                                                                             </div>
                                                                         </form>
-
-
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -201,63 +216,7 @@
                                                                     data-toggle="modal" data-target="#exampleModal">
                                                                 Registration >>>>
                                                             </button>
-                                                            <!-- Modal -->
-                                                            <div class="modal fade" id="exampleModal" tabindex="-1"
-                                                                 role="dialog" aria-labelledby="exampleModalLabel"
-                                                                 aria-hidden="true">
-                                                                <div class="modal-dialog" role="document">
-                                                                    <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                            <h5 class="modal-title"
-                                                                                id="exampleModalLabel">Infomation</h5>
-                                                                            <button type="button" class="close"
-                                                                                    data-dismiss="modal"
-                                                                                    aria-label="Close">
-                                                                                <span aria-hidden="true">&times;</span>
-                                                                            </button>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <p>Course 2 (6 month)</p>
-                                                                            <form>
-                                                                                <div class="form-group">
-                                                                                    <label for="exampleInputEmail1">Enter
-                                                                                        Email</label>
-                                                                                    <input type="email"
-                                                                                           class="form-control"
-                                                                                           id="exampleInputEmail1"
-                                                                                           aria-describedby="emailHelp"
-                                                                                           placeholder="Enter Email">
-                                                                                </div>
-                                                                                <div class="form-group">
-                                                                                    <label for="exampleInput">Enter
-                                                                                        Name</label>
-                                                                                    <input type="text"
-                                                                                           class="form-control"
-                                                                                           id="exampleInputPassword1"
-                                                                                           placeholder="Enter Name">
-                                                                                </div>
-                                                                                <div class="form-group">
-                                                                                    <label for="exampleInput">Enter
-                                                                                        Phone</label>
-                                                                                    <input type="text"
-                                                                                           class="form-control"
-                                                                                           id="exampleInputPassword1"
-                                                                                           placeholder="Enter Phone">
-                                                                                </div>
-                                                                            </form>
-                                                                        </div>
-                                                                        <div class="modal-footer">
-                                                                            <button type="button"
-                                                                                    class="btn btn-secondary"
-                                                                                    data-dismiss="modal">Close
-                                                                            </button>
-                                                                            <button type="submit"
-                                                                                    class="btn btn-primary">Submit
-                                                                            </button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+
 
                                                         </div>
                                                     </div>
@@ -289,69 +248,10 @@
 
                                                         </div>
                                                         <div class="course-cap-bottom d-flex justify-content-between">
-
                                                             <button type="button" class="btn btn-primary"
                                                                     data-toggle="modal" data-target="#exampleModal">
                                                                 Registration >>>>
                                                             </button>
-                                                            <!-- Modal -->
-                                                            <div class="modal fade" id="exampleModal" tabindex="-1"
-                                                                 role="dialog" aria-labelledby="exampleModalLabel"
-                                                                 aria-hidden="true">
-                                                                <div class="modal-dialog" role="document">
-                                                                    <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                            <h5 class="modal-title"
-                                                                                id="exampleModalLabel">Infomation</h5>
-                                                                            <button type="button" class="close"
-                                                                                    data-dismiss="modal"
-                                                                                    aria-label="Close">
-                                                                                <span aria-hidden="true">&times;</span>
-                                                                            </button>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <p>Course 3 (12 month)</p>
-                                                                            <form>
-                                                                                <div class="form-group">
-                                                                                    <label for="exampleInputEmail1">Enter
-                                                                                        Email</label>
-                                                                                    <input type="email"
-                                                                                           class="form-control"
-                                                                                           id="exampleInputEmail1"
-                                                                                           aria-describedby="emailHelp"
-                                                                                           placeholder="Enter Email">
-                                                                                </div>
-                                                                                <div class="form-group">
-                                                                                    <label for="exampleInput">Enter
-                                                                                        Name</label>
-                                                                                    <input type="text"
-                                                                                           class="form-control"
-                                                                                           id="exampleInputPassword1"
-                                                                                           placeholder="Enter Name">
-                                                                                </div>
-                                                                                <div class="form-group">
-                                                                                    <label for="exampleInput">Enter
-                                                                                        Phone</label>
-                                                                                    <input type="text"
-                                                                                           class="form-control"
-                                                                                           id="exampleInputPassword1"
-                                                                                           placeholder="Enter Phone">
-                                                                                </div>
-                                                                            </form>
-                                                                        </div>
-                                                                        <div class="modal-footer">
-                                                                            <button type="button"
-                                                                                    class="btn btn-secondary"
-                                                                                    data-dismiss="modal">Close
-                                                                            </button>
-                                                                            <button type="submit"
-                                                                                    class="btn btn-primary">Submit
-                                                                            </button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
                                                         </div>
                                                     </div>
                                                 </div>
@@ -371,3 +271,7 @@
 
     </main>
 @endsection
+
+{{--@section('scripts')--}}
+
+{{--@endsection--}}

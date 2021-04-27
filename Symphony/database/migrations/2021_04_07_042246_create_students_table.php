@@ -16,11 +16,10 @@ class CreateStudentsTable extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
 
+            $table->integer('user_id')->unique()->unsigned();
             $table->integer('grade_id')->unsigned();
 
             $table->string('avatar')->nullable();
-            $table->string('email');
-            $table->string('password');
             $table->string('fname');
             $table->string('lname');
             $table->date('dob');
@@ -28,8 +27,8 @@ class CreateStudentsTable extends Migration
             $table->string('address', 255);
             $table->date('date_of_join');
             $table->tinyInteger('status');
-            $table->date('last_login_date');
-            $table->string('last_login_ip');
+            $table->date('last_login_date')->nullable();
+            $table->string('last_login_ip')->nullable();
 
             $table->timestamps();
         });

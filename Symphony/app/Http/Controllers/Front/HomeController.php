@@ -26,10 +26,10 @@ class HomeController extends Controller
 
     // DUC
 
-    public function login()
-    {
-        return view('front.login.login');
-    }
+//    public function login()
+//    {
+//        return view('front.auth.login');
+//    }
 
     public function admin()
     {

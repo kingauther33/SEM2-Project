@@ -116,20 +116,20 @@
                 <div class="main-menu d-none d-lg-block">
                     <nav>
                         <ul id="navigation">
-                            <li class="{{ (request()->segment(1) == 'admin') ? 'active' : '' }}"><a href="admin">Admin</a></li>
-                            <li class="{{ (request()->segment(1) == 'staff') ? 'active' : '' }}"><a href="staff">Staff</a>
+                            <li class="{{ (request()->segment(1) == 'counselor') ? 'active' : '' }}"><a href="admin_counselor">Counselor</a></li>
+                            <li class="{{ (request()->segment(1) == 'staff') ? 'active' : '' }}"><a href="admin_staff">Staff</a>
                                 <ul class="submenu">
                                     <li><a href="#">All Teachers</a></li>
                                     <li><a href="#">Add Teacher</a></li>
                                 </ul>
                             </li>
-                            <li class="{{ (request()->segment(1) == 'student') ? 'active' : '' }}"><a href="student">Student</a>
+                            <li class="{{ (request()->segment(1) == 'student') ? 'active' : '' }}"><a href="admin_student">Student</a>
                                 <ul class="submenu">
                                     <li><a href="#">All Students</a></li>
                                     <li><a href="#">Admission Form</a></li>
                                 </ul>
                             </li>
-                            <li class="{{ (request()->segment(1) == 'class') ? 'active' : '' }}"><a href="class">Classes</a>
+                            <li class="{{ (request()->segment(1) == 'class') ? 'active' : '' }}"><a href="admin_class">Classes</a>
                                 <ul class="submenu">
                                     <li><a href="#">All Classes</a></li>
                                     <li><a href="#">Add New Class</a></li>

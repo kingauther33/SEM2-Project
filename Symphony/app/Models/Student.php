@@ -20,4 +20,8 @@ class Student extends Model
     public function grade() {
         return $this->belongsTo(Grade::class, 'grade_id', 'id');
     }
+
+    public function user() {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
 }

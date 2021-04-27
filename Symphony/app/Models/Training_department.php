@@ -16,4 +16,8 @@ class Training_department extends Model
     public function exams() {
         return $this->hasMany(Exam::class, 'training_department_id', 'id');
     }
+
+    public function user() {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
 }

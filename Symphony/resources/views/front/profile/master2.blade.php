@@ -25,7 +25,7 @@
 
 <nav class="navbar navbar-expand-md navbar-light">
 
-    <a style="padding-left: 50px" class="navbar-brand" href="#!">
+    <a style="padding-left: 50px" class="navbar-brand" href="#">
         <img src="front/OnlineEdu/img/logo/logo.png"  alt="">
     </a>
 
@@ -56,7 +56,7 @@
                             Đinh Tiến An
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="navbarDropdownMenuLink-55">
-                            <a class="dropdown-item" href="#!">Profile</a>
+                            <a class="dropdown-item" href="student_result">Profile</a>
                         </div>
                     </li>
                 </ul>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCounselorsTable extends Migration
+class CreateRolesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,9 @@ class CreateCounselorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('counselors', function (Blueprint $table) {
+        Schema::create('roles', function (Blueprint $table) {
             $table->id();
-
-            $table->integer('user_id')->unique()->unsigned();
-
-            $table->string('fname');
-            $table->string('lname');
-            $table->date('dob');
-            $table->string('phone');
-
+            $table->text('name');
             $table->timestamps();
         });
     }
@@ -34,6 +27,6 @@ class CreateCounselorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('counselors');
+        Schema::dropIfExists('roles');
     }
 }

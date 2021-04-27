@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Front;
 use App\Http\Controllers\Controller;
 use App\Models\Teacher;
 use App\Models\Visitor;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -41,10 +42,16 @@ class CourseController extends Controller
     }
 
     public function new_course(Request $request) {
+        $request->validate([
+            'email' => 'email',
+            'course_id' => 'regex:/[1-3]{1}/'
+        ]);
+
         $subcribe = new Visitor();
         $subcribe->fname = $request->fname;
         $subcribe->lname = $request->lname;
         $subcribe->email = $request->email;
+        $subcribe->course_id = $request->course_id;
         $subcribe->phone = $request->phone;
         $subcribe->address = $request->address;
 
@@ -52,4 +59,6 @@ class CourseController extends Controller
 
         return redirect()->back();
     }
+
+
 }

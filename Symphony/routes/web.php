@@ -34,6 +34,15 @@ Route::get('/instructor', [Front\HomeController::class, 'instructor']);
 
 Route::post('/contact', [Front\HomeController::class, 'subscribe']);
 
+Route::get('/login', [Front\UserAuthController::class, 'login']);
+
+Route::post('check', [Front\UserAuthController::class, 'check'])->name('admin.checklogin');
+
+//Son
+
+Route::get('/student_result', [Front\StudentController::class, 'result']);
+Route::get('/student_profile', [Front\StudentController::class, 'profile']);
+
 
 // HIEU
 
@@ -45,21 +54,33 @@ Route::get('/search_exam', [Front\CourseController::class, 'search_exam']);
 
 // DUC
 
-Route::get('/login', [Front\HomeController::class, 'login']);
+//Route::get('/auth', [Front\HomeController::class, 'auth']);
 
-Route::get('/admin', [Front\HomeController::class, 'admin']);
+//Route::get('/admin', [Front\AdminController::class, 'admin']);
 
-Route::get('/staff', [Front\HomeController::class, 'staff']);
+Route::get('/admin_staff', [Front\AdminController::class, 'staff'])->name('admin.staff');
 
-Route::get('/student', [Front\HomeController::class, 'student']);
+Route::get('/admin_student', [Front\AdminController::class, 'student']);
 
-Route::get('/class', [Front\HomeController::class, 'class']);
+Route::get('/admin_class', [Front\AdminController::class, 'class']);
 
-Route::get('/addstudent', [Front\HomeController::class, 'addStudent']);
+Route::get('/admin_counselor', [Front\AdminController::class, 'counselor']);
 
-Route::get('/addcourse', [Front\HomeController::class, 'addCourse']);
+Route::get('/admin_addstudent', [Front\AdminController::class, 'addStudent']);
 
-Route::get('/addprofessor', [Front\HomeController::class, 'addProfessor']);
+Route::post('/admin_addstudent', [Front\AdminController::class, 'addStudent1'])->name('admin.addstudent');
+
+Route::get('/admin_addcourse', [Front\AdminController::class, 'addCourse']);
+
+Route::post('/admin_addcourse', [Front\AdminController::class, 'addCourse1'])->name('admin.addcourse');
+
+Route::get('/admin_addprofessor', [Front\AdminController::class, 'addProfessor']);
+
+Route::post('/admin_addprofessor', [Front\AdminController::class, 'addProfessor1'])->name('admin.addprofessor');
+
+Route::get('/admin_addcounselor', [Front\AdminController::class, 'addCounselor']);
+
+Route::post('/admin_addcounselor', [Front\AdminController::class, 'addCounselor1'])->name('admin.addcounselor');
 
 //Phong
 
