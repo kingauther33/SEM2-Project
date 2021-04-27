@@ -13,27 +13,27 @@
                             </header>
                         </div>
 
-                        <form action="addstudent" method="post">
+                        <form action="{{ route('admin.addstudent') }}" method="post">
                             @csrf
                         <div class="card-body row">
 
                                 <div class="col-lg-6 p-t-20">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded" data-upgraded=",MaterialTextField">
-                                        <input class="mdl-textfield__input" type="text" id="txtFirstName" name="fname" >
+                                        <input class="mdl-textfield__input" type="text" id="txtFirstName" name="first name" >
                                         <label class="mdl-textfield__label">
                                             First Name
                                         </label>
-                                        <span class="text-danger">@error('fname') {{ $message }} @enderror</span>
+                                        <span class="text-danger">@error('first name') {{ $message }} @enderror</span>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 p-t-20">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded" data-upgraded=",MaterialTextField">
-                                        <input class="mdl-textfield__input" type="text" id="txtLastName" name="lname" >
+                                        <input class="mdl-textfield__input" type="text" id="txtLastName" name="last name" >
                                         <label class="mdl-textfield__label">
                                             Last Name
                                         </label>
-                                        <span class="text-danger">@error('lname') {{ $message }} @enderror</span>
+                                        <span class="text-danger">@error('last name') {{ $message }} @enderror</span>
                                     </div>
                                 </div>
 
@@ -58,21 +58,21 @@
 
                                 <div class="col-lg-6 p-t-20">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded" data-upgraded=",MaterialTextField">
-                                        <input class="mdl-textfield__input flatpickr-input" type="text" id="date" name="date_of_join" >
+                                        <input class="mdl-textfield__input flatpickr-input" type="text" id="date" name="registration date" >
                                         <label class="mdl-textfield__label">
                                             Registration Date
                                         </label>
-                                        <span class="text-danger">@error('date_of_join') {{ $message }} @enderror</span>
+                                        <span class="text-danger">@error('registration date') {{ $message }} @enderror</span>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 p-t-20">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded" data-upgraded=",MaterialTextField">
-                                        <input class="mdl-textfield__input" type="text" id="class" name="grade_id" >
+                                        <input class="mdl-textfield__input" type="text" id="class" name="class id" >
                                         <label class="mdl-textfield__label">
                                             Class ID
                                         </label>
-                                        <span class="text-danger">@error('grade_id') {{ $message }} @enderror</span>
+                                        <span class="text-danger">@error('class id') {{ $message }} @enderror</span>
                                     </div>
                                 </div>
 
@@ -88,11 +88,11 @@
 
                                 <div class="col-lg-6 p-t-20">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded" data-upgraded=",MaterialTextField">
-                                        <input class="mdl-textfield__input" type="text" id="text5" name="phone" >
+                                        <input class="mdl-textfield__input" type="text" id="text5" name="phone number" >
                                         <label class="mdl-textfield__label" for="text5">
                                             Phone Number
                                         </label>
-                                        <span class="text-danger">@error('phone') {{ $message }} @enderror</span>
+                                        <span class="text-danger">@error('phone number') {{ $message }} @enderror</span>
                                     </div>
                                 </div>
 
@@ -117,11 +117,11 @@
 
                                 <div class="col-lg-6 p-t-20">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded" data-upgraded=",MaterialTextField">
-                                        <input class="mdl-textfield__input flatpickr-input" type="text" id="dateOfBirth" name="dob" >
+                                        <input class="mdl-textfield__input flatpickr-input" type="text" id="dateOfBirth" name="birth date" >
                                         <label class="mdl-textfield__label">
                                             Birth Date
                                         </label>
-                                        <span class="text-danger">@error('dob') {{ $message }} @enderror</span>
+                                        <span class="text-danger">@error('birth date') {{ $message }} @enderror</span>
                                     </div>
                                 </div>
 

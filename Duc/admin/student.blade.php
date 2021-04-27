@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-6">
                     <div class="btn-group">
-                        <a class="btn btn-info {{ (request()->segment(1) == 'addStudent') ? 'active' : '' }}" href="addstudent" id="addRow">
+                        <a class="btn btn-info {{ (request()->segment(1) == 'addStudent') ? 'active' : '' }}" href="admin_addstudent" id="addRow">
                             Add New
                             <i class="fa fa-plus"></i>
                         </a>

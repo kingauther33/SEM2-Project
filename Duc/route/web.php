@@ -42,29 +42,29 @@ Route::get('/login', [Front\HomeController::class, 'login']);
 
 Route::get('/admin', [Front\AdminController::class, 'admin']);
 
-Route::get('/staff', [Front\AdminController::class, 'staff']);
+Route::get('/admin_staff', [Front\AdminController::class, 'staff']);
 
-Route::get('/student', [Front\AdminController::class, 'student']);
+Route::get('/admin_student', [Front\AdminController::class, 'student']);
 
-Route::get('/class', [Front\AdminController::class, 'class']);
+Route::get('/admin_class', [Front\AdminController::class, 'class']);
 
-Route::get('/counselor', [Front\AdminController::class, 'counselor']);
+Route::get('/admin_counselor', [Front\AdminController::class, 'counselor']);
 
-Route::get('/addstudent', [Front\AdminController::class, 'addStudent']);
+Route::get('/admin_addstudent', [Front\AdminController::class, 'addStudent']);
 
-Route::post('/addstudent', [Front\AdminController::class, 'addStudent1']);
+Route::post('/admin_addstudent', [Front\AdminController::class, 'addStudent1'])->name('admin.addstudent');
 
-Route::get('/addcourse', [Front\AdminController::class, 'addCourse']);
+Route::get('/admin_addcourse', [Front\AdminController::class, 'addCourse']);
 
-Route::post('/addcourse', [Front\AdminController::class, 'addCourse1']);
+Route::post('/admin_addcourse', [Front\AdminController::class, 'addCourse1'])->name('admin.addcourse');
 
-Route::get('/addprofessor', [Front\AdminController::class, 'addProfessor']);
+Route::get('/admin_addprofessor', [Front\AdminController::class, 'addProfessor']);
 
-Route::post('/addprofessor', [Front\AdminController::class, 'addProfessor1']);
+Route::post('/admin_addprofessor', [Front\AdminController::class, 'addProfessor1'])->name('admin.addprofessor');
 
-Route::get('/addcounselor', [Front\AdminController::class, 'addCounselor']);
+Route::get('/admin_addcounselor', [Front\AdminController::class, 'addCounselor']);
 
-Route::post('/addcounselor', [Front\AdminController::class, 'addCounselor1']);
+Route::post('/admin_addcounselor', [Front\AdminController::class, 'addCounselor1'])->name('admin.addcounselor');
 
 // AN
 

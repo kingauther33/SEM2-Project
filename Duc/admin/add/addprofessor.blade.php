@@ -13,28 +13,28 @@
                     </header>
                 </div>
 
-                <form action="addprofessor" method="post">
+                <form action="{{ route('admin.addprofessor') }}" method="post">
                     @csrf
 
                 <div class="card-body row">
 
                         <div class="col-lg-6 p-t-20">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded" data-upgraded=",MaterialTextField">
-                                <input class="mdl-textfield__input" type="text" id="txtFirstName" name="fname" >
+                                <input class="mdl-textfield__input" type="text" id="txtFirstName" name="first name" >
                                 <label class="mdl-textfield__label">
                                     First Name
                                 </label>
-                                <span class="text-danger">@error('fname') {{ $message }} @enderror</span>
+                                <span class="text-danger">@error('first name') {{ $message }} @enderror</span>
                             </div>
                         </div>
 
                         <div class="col-lg-6 p-t-20">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded" data-upgraded=",MaterialTextField">
-                                <input class="mdl-textfield__input" type="text" id="txtLastName" name="lname" >
+                                <input class="mdl-textfield__input" type="text" id="txtLastName" name="last name" >
                                 <label class="mdl-textfield__label">
                                     Last Name
                                 </label>
-                                <span class="text-danger">@error('lname') {{ $message }} @enderror</span>
+                                <span class="text-danger">@error('last name') {{ $message }} @enderror</span>
                             </div>
                         </div>
 
@@ -87,11 +87,11 @@
 
                         <div class="col-lg-6 p-t-20">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded" data-upgraded=",MaterialTextField">
-                                <input class="mdl-textfield__input" type="text" id="txtDepartment" name="specialty" >
+                                <input class="mdl-textfield__input" type="text" id="txtDepartment" name="department" >
                                 <label class="mdl-textfield__label" for="txtDepartment">
                                     Department
                                 </label>
-                                <span class="text-danger">@error('specialty') {{ $message }} @enderror</span>
+                                <span class="text-danger">@error('department') {{ $message }} @enderror</span>
                             </div>
                         </div>
 
@@ -106,21 +106,21 @@
 
                         <div class="col-lg-6 p-t-20">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded" data-upgraded=",MaterialTextField">
-                                <input class="mdl-textfield__input" type="text"  id="text5" name="phone" >
+                                <input class="mdl-textfield__input" type="text"  id="text5" name="phone number" >
                                 <label class="mdl-textfield__label" for="text5">
                                     Phone Number
                                 </label>
-                                <span class="text-danger">@error('phone') {{ $message }} @enderror</span>
+                                <span class="text-danger">@error('phone number') {{ $message }} @enderror</span>
                             </div>
                         </div>
 
                         <div class="col-lg-6 p-t-20">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded" data-upgraded=",MaterialTextField">
-                                <input class="mdl-textfield__input flatpickr-confirm" type="text" id="dateOfBirth" name="dob" >
+                                <input class="mdl-textfield__input flatpickr-confirm" type="text" id="dateOfBirth" name="birth date" >
                                 <label class="mdl-textfield__label">
                                     Birth Date
                                 </label>
-                                <span class="text-danger">@error('dob') {{ $message }} @enderror</span>
+                                <span class="text-danger">@error('birth date') {{ $message }} @enderror</span>
                             </div>
                         </div>
 
